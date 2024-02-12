@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
+import style from "./layout.module.css";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import 'bootstrap/dist/css/bootstrap.css';
+
+import Header from "@/components/shared/Header/Header";
+import Footer from "@/components/shared/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +20,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="d-flex flex-column" style={{ minHeight: '100vh' }}>
+        <Header></Header>
+        <div className="mx-auto d-block bg-blue container py-4" style={{ flex: 1 }}>
+          {children}
+        </div>
+
+        <Footer></Footer>
+      </body>
+
+
     </html>
   );
 }

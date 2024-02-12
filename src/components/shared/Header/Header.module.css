@@ -1,0 +1,54 @@
+.brand{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    font-size: 24px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none; /* Elimina los marcadores (bullets o números) */
+    margin: 0; /* Elimina el margen exterior */
+    padding: 0; /* Elimina el relleno interior */
+    justify-content: space-around;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* Estilos para los enlaces del encabezado */
+.link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  font-style: none;
+  margin-left: 10px;
+  margin-right: 10px;  
+  font-weight: 24;
+}
+
+.link:hover {
+  color: #65a3c3;
+}
+
+.submenu{
+    display: none;
+}
+
+
+
+/* Media query para hacer el menú vertical en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+  }
+}
