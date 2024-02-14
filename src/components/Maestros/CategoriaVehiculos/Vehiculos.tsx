@@ -1,9 +1,9 @@
 // DriverTable.js
 "use client" 
 import React from "react";
-import Tablas from "../shared/Tablas/Tablas";
+import Tablas from "../../shared/Tablas/Tablas";
 
-function Conductores() {
+function CategoriaVehiculos() {
 
 
   return (
@@ -19,4 +19,4 @@ function Conductores() {
   );
 }
 
-export default Conductores;
+export default CategoriaVehiculos;

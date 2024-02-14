@@ -1,12 +1,14 @@
-import ListaConductores from "../../../components/Conductores/Conductores"
-import Pagination from "@/components/shared/Tablas/Paginacion"
+import Tablas from "@/components/shared/Tablas/Tablas"
 
-export default function Conductores() {
+export default function Vehiculo() {
+
 
     return (
         <div>
-            <h2>Conductores  </h2>
-            <ListaConductores/>
+            <Tablas currentPage={5}
+                totalPages={10}
+                listaEncabezados={["Nombre", "Apellido", "Licencia"]}
+                datos={[["Heywin", "Perez", "2"], ["Hernando", "Meneses", "3"], ["Matthew", "Meneses", "4"]]} />
         </div>
     )
 }

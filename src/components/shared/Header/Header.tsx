@@ -26,7 +26,7 @@ function Header() {
             <li><Link className={styles.link} href="#">Informes</Link></li>
           </ul>
         </div>
-        <button className="btn btn-outline-light my-2 my-sm-0" type="submit">Cerrar</button>
+        <button className="btn btn-outline-light my-2 my-sm-0 btn-sm" type="submit">Cerrar</button>
       </div>
 
     </nav>
