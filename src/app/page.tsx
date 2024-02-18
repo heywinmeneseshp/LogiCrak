@@ -1,50 +1,51 @@
-"use client"
-import React from 'react';
+// pages/index.tsx (o cualquier otra página)
 
-const FuelConsumptionDashboard = () => {
+import React from 'react';
+import TablaCargas from '@/components/Rutas/TablaViajesMulas';
+
+const datosCargas = [
+  {
+    FECHA: '19/02/2024',
+    SEM: 8,
+    FINCA: 'LUCIA SUR',
+    FRUTA: 'TUCAN 17 KILOS',
+    CANT: 1144,
+    VEHICULOS: 'SZX550',
+    LLEGADA: '',
+    CIERRE: '',
+    SALIDA: '',
+    BOOKING: '61268469',
+    BUQUE: 'CAPE ALTIUS',
+    LINEA: 'HAPAG LLOYD',
+    DESTINO: 'VLISSINGEN',
+    CONTENEDOR: '',
+  },
+  {
+    FECHA: '19/02/2024',
+    SEM: 8,
+    FINCA: 'SAN FRANCISCO',
+    FRUTA: 'BANANAS FAIRTRADE TUCAN 18K',
+    CANT: 1116,
+    VEHICULOS: 'SZX498',
+    LLEGADA: '',
+    CIERRE: '',
+    SALIDA: '',
+    BOOKING: '61268473',
+    BUQUE: 'CAPE ALTIUS',
+    LINEA: 'HAPAG LLOYD',
+    DESTINO: 'HAMBURGO',
+    CONTENEDOR: '',
+  },
+  // Agrega más datos de cargas aquí...
+];
+
+const HomePage: React.FC = () => {
   return (
-    <div className="container mt-5">
-      <h1 className="text-center mb-4">Dashboard de Consumo de Combustible por Vehículo</h1>
-      <div className="row">
-        <div className="col-md-6">
-          <div className="card mb-4 border-0 rounded-3 shadow">
-            <div className="card-header bg-primary text-white border-0 rounded-top">
-              Vehículo 1
-            </div>
-            <div className="card-body">
-              <p className="card-text">Stock Inicial: 100 litros</p>
-              <p className="card-text">Consumo: 50 litros</p>
-              <p className="card-text">Tanqueo: 70 litros</p>
-              <p className="card-text">Stock Final: 50 litros</p>
-              <p className="card-text">Fecha: 2022-02-15</p>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-6">
-          <div className="card mb-4 border-0 rounded-3 shadow">
-            <div className="card-header bg-success text-white border-0 rounded-top">
-              Vehículo 2
-            </div>
-            <div className="card-body">
-              <strong>
-                <p className="card-text"> Stock Inicial: 120 litros</p>
-              </strong>
-              <strong>
-                <p className="card-text text-danger">Consumo: 40 litros</p>
-              </strong>
-              <strong>
-                <p className="card-text text-success">Tanqueo: 100 litros</p>
-              </strong>
-              <strong>
-                <p className="card-text">Stock Final: 80 litros</p>
-              </strong>
-              <p className="card-text">Fecha: 2022-02-15</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div>
+      <h1>Tabla de Cargas</h1>
+      <TablaCargas cargas={datosCargas} />
     </div>
   );
 };
 
-export default FuelConsumptionDashboard;
+export default HomePage;
